@@ -1,0 +1,35 @@
+@{
+
+    ViewData["Title"] = "Cadastro";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar computadores</h1>
+</div>
+
+<div class="container">
+    <div class="con">
+        <div class="right-side">
+            <br>
+            <p>
+                Preencha o formulário e cadastre agora um computador!!!
+            </p>
+            <form action="Create" method="post">
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o número de identificação" name="id"  required/>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Digite a quantidade de memória ram" name="ram" required="required" />
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o tipo de processador" name="processor"  required/>
+                </div>
+
+                <button type="submit" class="bt">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+</div>
