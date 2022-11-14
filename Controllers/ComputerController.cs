@@ -18,9 +18,9 @@ public class ComputerController : Controller
     {
         Computer computer = _context.Computers.Find(id);
 
-        if(computer == null)
+        if (computer == null)
         {
-            return NotFound(); // RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
 
         return View(computer);
@@ -29,10 +29,17 @@ public class ComputerController : Controller
     public IActionResult Create([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
     {
         Computer computer = new Computer(id, ram, processor);
-        _context.Computers.Add(computer);
-        _context.SaveChanges();
 
-        return View("Cadastro");
+        if (computer == null)
+        {
+            _context.Computers.Add(computer);
+            _context.SaveChanges();
+            return View("Cadastro");
+        }
+        else
+        {
+            return View();
+        }
     }
 
     public IActionResult Cadastro()
@@ -40,7 +47,8 @@ public class ComputerController : Controller
         return View();
     }
 
-     public IActionResult Delete(int id){
+    public IActionResult Delete(int id)
+    {
 
         Computer identificacao = _context.Computers.Find(id);
         _context.Computers.Remove(identificacao);
@@ -48,14 +56,26 @@ public class ComputerController : Controller
         return View();
     }
 
-    public IActionResult Atualizar(int id, [FromForm] string ram, [FromForm] string processor )
+    public IActionResult Atualizar()
     {
-        Computer identificacao = _context.Computers.Find(id);
-        
-
         return View();
     }
 
+    public IActionResult Atualizando([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
+    {
+        Computer identificacao = _context.Computers.Find(id);
+        if (identificacao == null)
+        {
+            return View();
+        }
+        else
+        {
+            identificacao.Ram = ram;
+            identificacao.Processor = processor;
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
 
+    }
 
 }

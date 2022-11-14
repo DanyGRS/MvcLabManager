@@ -4,6 +4,7 @@
 
 }
 
+
 <div class="text-center">
     <h1 class="display-4">Cadastrar computadores</h1>
 </div>
@@ -17,15 +18,16 @@
             </p>
             <form action="Create" method="post">
                 <div class="input-box">
-                    <input type="text" placeholder="Digite o número de identificação" name="id"  required/>
+                    <input type="text" placeholder="Digite o número de identificação" name="id" required />
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Digite a quantidade de memória ram" name="ram" required="required" />
+                    <input type="text" placeholder="Digite a quantidade de memória ram" name="ram"
+                        required="required" />
                 </div>
 
                 <div class="input-box">
-                    <input type="text" placeholder="Digite o tipo de processador" name="processor"  required/>
+                    <input type="text" placeholder="Digite o tipo de processador" name="processor" required />
                 </div>
 
                 <button type="submit" class="bt">Cadastrar</button>
@@ -33,3 +35,131 @@
         </div>
     </div>
 </div>
+
+<style>
+    .container {
+        background: #fff;
+        border-radius: 6px;
+        padding: 6px 40px 23px 40px;
+        width: fit-content;
+    }
+
+    .container .con {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    .container .con .left-side {
+        width: 0%;
+        height: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        position: relative;
+    }
+
+    .input-box select {
+        border: none;
+        background: #F0F1F8;
+        border-radius: 6px;
+    }
+
+    .con::before {
+        content: '';
+        position: absolute;
+        height: 0%;
+        width: 2px;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #98857E;
+    }
+
+    .con .details {
+        margin: 14px;
+        text-align: center;
+    }
+
+    .con .details i {
+        font-size: 30px;
+        color: #90562E;
+        margin-bottom: 10px;
+    }
+
+    .con .details .topic {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .con .left-side .details .text-one,
+    .con .left-side .details .text-two {
+        font-size: 14px;
+        color: #afafb6;
+    }
+
+    .container .con .right-side {
+        width: 75%;
+        margin-left: 50px;
+    }
+
+    .con .right-side .topic-text {
+        font-size: 23px;
+        font-weight: 600;
+        color: #90562E;
+    }
+
+    .right-side .input-box {
+        height: 40px;
+        width: 100%;
+        margin: 12px 0;
+    }
+
+    .right-side .input-box input,
+    .right-side .input-box textarea {
+        height: 80%;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background: #F0F1F8;
+        border-radius: 6px;
+        padding: 0 15px;
+        resize: none;
+    }
+
+    .right-side .message-box {
+        min-height: 110px;
+    }
+
+    .right-side .input-box textarea {
+        padding-top: 6px;
+    }
+
+    .right-side {
+        display: inline-block;
+        margin-top: 12px;
+    }
+
+    .bt {
+        background-color: #026773;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .bt:hover {
+        background-color: #012E40;
+
+    }
+
+    .fot {
+        margin-left: 10px;
+        background-color: #fff;
+    }
+</style>
