@@ -1,0 +1,40 @@
+@{
+
+    ViewData["Title"] = "Cadastro";
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Cadastrar laboratórios</h1>
+</div>
+
+<div class="container">
+    <div class="con">
+        <div class="right-side">
+            <br>
+            <p>
+                Preencha o campo Id com um Id existente e preencha os campos que deseja editar!!!
+            </p>
+            <form action="Atualizando" method="post">
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o número de identificação do Lab" name="id" required />
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o número do Lab" name="number"
+                        required="required" />
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o nome do Lab" name="name" required />
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="Digite o bloco do Lab" name="block" required />
+                </div>
+
+                <button type="submit" class="bt">Atualizar</button>
+            </form>
+        </div>
+    </div>
+</div>

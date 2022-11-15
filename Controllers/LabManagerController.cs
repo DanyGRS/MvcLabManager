@@ -3,37 +3,37 @@ using MvcLabManager.Models;
 
 namespace MvcLabManager.Controllers;
 
-public class ComputerController : Controller
+public class LabManagerController : Controller
 {
     private readonly LabManagerContext _context;
 
-    public ComputerController(LabManagerContext context)
+    public LabManagerContext(LabManagerContext context)
     {
         _context = context;
     }
 
-    public IActionResult Index() => View(_context.Computers);
+    public IActionResult Index() => View(_context.Labs);
 
     public IActionResult Show(int id)
     {
-        Computer computer = _context.Computers.Find(id);
+        Lab lab = _context.Labs.Find(id);
 
-        if (computer == null)
+        if (lab == null)
         {
             return RedirectToAction("Index");
         }
 
-        return View(computer);
+        return View(lab);
     }
 
-    public IActionResult Create([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
+    public IActionResult Create([FromForm] int id, [FromForm] int number, [FromForm] string name, [FromForm] string block)
     {
-        Computer identificacao = _context.Computers.Find(id);
+        Lab identificacao = _context.Labs.Find(id);
 
         if (identificacao == null)
         {
-            Computer computer = new Computer(id, ram, processor);
-            _context.Computers.Add(computer);
+            lab lab = new Lab(id, number, name, block );
+            _context.Labs.Add(lab);
             _context.SaveChanges();
             return View("Cadastro");
         }
@@ -51,8 +51,8 @@ public class ComputerController : Controller
     public IActionResult Delete(int id)
     {
 
-        Computer identificacao = _context.Computers.Find(id);
-        _context.Computers.Remove(identificacao);
+        Lab identificacao = _context.Labs.Find(id);
+        _context.Labs.Remove(identificacao);
 
         return View();
     }
@@ -62,17 +62,18 @@ public class ComputerController : Controller
         return View();
     }
 
-    public IActionResult Atualizando([FromForm] int id, [FromForm] string ram, [FromForm] string processor)
+    public IActionResult Atualizando([FromForm] int id, [FromForm] int number, [FromForm] string name, [FromForm] string block)
     {
-        Computer identificacao = _context.Computers.Find(id);
+        Lab identificacao = _context.Labs.Find(id);
         if (identificacao == null)
         {
             return View();
         }
         else
         {
-            identificacao.Ram = ram;
-            identificacao.Processor = processor;
+            identificacao.Number = number;
+            identificacao.Name = name;
+            identificacao.Block = block;
             _context.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,3 +1,129 @@
+/* _content/MvcLabManager/Views/Computer/Cadastro.cshtml.rz.scp.css */
+.container[b-jl8pn58kol] {
+    background: #fff;
+    border-radius: 6px;
+    padding: 6px 40px 23px 40px;
+    width: fit-content;
+}
+
+.container .con[b-jl8pn58kol] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.container .con .left-side[b-jl8pn58kol] {
+    width: 0%;
+    height: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    position: relative;
+}
+
+.input-box select[b-jl8pn58kol] {
+    border: none;
+    background: #F0F1F8;
+    border-radius: 6px;
+}
+
+.con[b-jl8pn58kol]::before {
+    content: '';
+    position: absolute;
+    height: 0%;
+    width: 2px;
+    right: -15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #98857E;
+}
+
+.con .details[b-jl8pn58kol] {
+    margin: 14px;
+    text-align: center;
+}
+
+.con .details i[b-jl8pn58kol] {
+    font-size: 30px;
+    color: #90562E;
+    margin-bottom: 10px;
+}
+
+.con .details .topic[b-jl8pn58kol] {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.con .left-side .details .text-one[b-jl8pn58kol],
+.con .left-side .details .text-two[b-jl8pn58kol] {
+    font-size: 14px;
+    color: #afafb6;
+}
+
+.container .con .right-side[b-jl8pn58kol] {
+    width: 75%;
+    margin-left: 50px;
+}
+
+.con .right-side .topic-text[b-jl8pn58kol] {
+    font-size: 23px;
+    font-weight: 600;
+    color: #90562E;
+}
+
+.right-side .input-box[b-jl8pn58kol] {
+    height: 40px;
+    width: 100%;
+    margin: 12px 0;
+}
+
+.right-side .input-box input[b-jl8pn58kol],
+.right-side .input-box textarea[b-jl8pn58kol] {
+    height: 80%;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: #F0F1F8;
+    border-radius: 6px;
+    padding: 0 15px;
+    resize: none;
+}
+
+.right-side .message-box[b-jl8pn58kol] {
+    min-height: 110px;
+}
+
+.right-side .input-box textarea[b-jl8pn58kol] {
+    padding-top: 6px;
+}
+
+.right-side[b-jl8pn58kol] {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.bt[b-jl8pn58kol] {
+    background-color: #026773;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.bt:hover[b-jl8pn58kol] {
+    background-color: #012E40;
+
+}
+
+.fot[b-jl8pn58kol] {
+    margin-left: 10px;
+    background-color: #fff;
+}
 /* _content/MvcLabManager/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */

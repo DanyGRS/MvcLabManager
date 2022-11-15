@@ -48,3 +48,4 @@ C:\Users\PC\Desktop\MvcLabManager\obj\Debug\net6.0\refint\MvcLabManager.dll
 C:\Users\PC\Desktop\MvcLabManager\obj\Debug\net6.0\MvcLabManager.pdb
 C:\Users\PC\Desktop\MvcLabManager\obj\Debug\net6.0\MvcLabManager.genruntimeconfig.cache
 C:\Users\PC\Desktop\MvcLabManager\obj\Debug\net6.0\ref\MvcLabManager.dll
+C:\Users\PC\Desktop\MvcLabManager\obj\Debug\net6.0\scopedcss\Views\Computer\Cadastro.cshtml.rz.scp.css
